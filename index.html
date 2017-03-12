@@ -394,7 +394,7 @@
 
 请参考下面的例子
 
-1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071package com.calculation;public class Example &#123;    public static void sort(Comparable[] a)&#123;&#125;    /**     * 比较此对象与指定对象的顺序。如果该对象小于、等于或大于指定对象，则分别返回负整数、零或正整数。     * 如果v &lt; w 返回t
+123456789101112131415
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -553,8 +553,7 @@
           单一职责原则1There should never be more than one reason for a class to change.
 分析电话通话的时候有四个过程发生：拨号、通话、回应、挂机，如下所示:
 下面是具体代码实现：
-12345678910111213141516/** * 类描述: * * @author:tangniannian * @date:2016/12/5 * @修改描述： * @modifier $&#123;tags&#125; */public interface IPhone &#123;    void dial(String phoneNum);    void chat(Object o);    void hangup();&#125;
-上面的代码看起来没有问题，但是单一职责原则要求一个接口或者类只有一个原因引起变化，也就是说一个接口或者类只有一个职责，它就负责一件事，上面的接口显然并不是只负责一件事情。IPone这个接口可不只是有一个职责，它包含了两个职责：一个是协议管理，一个是数据送达。dial()和hangup()两个方法实现的是协
+12345678910111213141516/** * 类描述: * * @author:tangniannian * @date:2016/12/5 * @修
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -712,7 +711,7 @@
           
           单例模式定义单例模式是一个简单的模式，定义如下：Ensure a class has only one instance ,and provide a global point of access to it.==（确保一个类只有一个实例，而且自行实例化并向整个系统提供这个实例）==下面是单例模式的通用类图：
 
-类图代码实现：1234567891011121314151617181920212223public class Singleton &#123;    private static final Singleton singleton = new Singleton();    // 限制产生多个对象    private  Singleton()&#123;&#125;    // 通过该方法获得实例对象    public static Singleton getSingleton() &#123;        return singleton;    &#125;        // 类中的其他方法，尽量是static    public static void dos
+类图代码实现：123456789101112131415161718192021222
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -869,15 +868,7 @@
         
           
           依赖倒置原则
-定义High level modules should not depend upon low level modules.Both should depend upon abstractions.Abstractions should not depend upon details.Details should depend upon abstractions.翻译上面的话有一下三层含义：
-
-高层模块不应该依赖底层模块，两者都应该依赖其抽象
-抽象不应该依赖其细节
-细节应该依赖抽象 
-
-高层模块和低层模块容易理解，每一个逻辑的实现都是由原子逻辑组成的，不可分割的原子逻辑就是低层模块，原子逻辑的再组装就是高层模块。那什么是抽象？什么又是细节呢？在Java语言中，==抽象就是指接口或抽象类==，两者都是不能直接被实例化的；==细节就是实现类==，实现接口或继承抽象类而产生的类就是细节，其特点就是可以直接被实例化，也就是可以加上一个关键字new产生一个对象。依赖倒置原则在Java语言中的表现就是:   
-
-模块间的依赖通过抽象发生，实现类之间不发生直接的依赖关系，其依赖关系是通
+定义High level modules should not depend upon low level modules.Both should depend upon abstractions.Abstractions should not depend upon details.Details should depend upon abstractions.翻译上面的话有一下三
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -1039,7 +1030,7 @@
 
 关闭tomcat进程
 
-12345678910111213141516171819202122232425262728293031#!/bin/bash# 判断输入应用名称judgeName()&#123; read -t 30 -p &quot;please input the app name: &quot; name		case $name in	firstweb | secondweb | mrtauth | thridweb)		shutdownApps $name ;;	manage)		echo &quot;Please input tomcat-manege. Try again!&quot;;;	tomca
+1234
           ...
           <!--noindex-->
           <div class="post-button text-center">
