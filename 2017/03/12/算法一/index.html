@@ -103,7 +103,7 @@
 请参考下面的例子
 
 123456789101112131415">
-<meta property="og:updated_time" content="2017-03-12T07:56:03.266Z">
+<meta property="og:updated_time" content="2017-03-12T07:58:40.468Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="算法一">
 <meta name="twitter:description" content="排序一、选择排序
@@ -417,7 +417,7 @@
 <h2 id="二、插入排序"><a href="#二、插入排序" class="headerlink" title="二、插入排序"></a>二、插入排序</h2><ul>
 <li>定义<br>为了给要插入的元素腾出空间，我们需要将其余所有元素在插入之前都向右移动一位。 这种算法叫做插入排序。 与选择排序一样，当前索引左边的所有元素都是有序的，但它们的最终位置还不确定，为了给更小的元素腾出空间，它们可能会被移动。 但是当索引到达数组的右端时， 数组排序就完成了。和选择排序不同的是，插入排序所需的时间取决于输入中元素的初始顺序。 例如，对一个很大且其中的元素已经有序（或接近有序） 的数组进行排序将会比对随机顺序的数组或是逆序数组进行排序要快得多。  </li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">/**</div><div class="line">     * 插入排序</div><div class="line">     * 在计算机的实现中， 为了给要插入的元素腾出空间,我们需要将其余所有元素在插入之前都向右移动一位。 这种算法叫做插入排序</div><div class="line">     * @param a</div><div class="line">     */</div><div class="line">    public static void insertSort(Comparable[] a)&#123;</div><div class="line">        int size = a.length;</div><div class="line">        for (int i = 1; i &lt; size; i++)&#123;</div><div class="line">            for(int j = i; j &gt; 0 &amp;&amp; less(a[j], a[j-1]); j--)&#123;</div><div class="line">                exch(a, j, j-1);</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/**</span></div><div class="line">     * 插入排序</div><div class="line">     * 在计算机的实现中， 为了给要插入的元素腾出空间,我们需要将其余所有元素在插入之前都向右移动一位。 这种算法叫做插入排序</div><div class="line">     * <span class="doctag">@param</span> a</div><div class="line">     */</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">insertSort</span><span class="params">(Comparable[] a)</span></span>&#123;</div><div class="line">        <span class="keyword">int</span> size = a.length;</div><div class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; size; i++)&#123;</div><div class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j = i; j &gt; <span class="number">0</span> &amp;&amp; less(a[j], a[j-<span class="number">1</span>]); j--)&#123;</div><div class="line">                exch(a, j, j-<span class="number">1</span>);</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div></pre></td></tr></table></figure>
       
     </div>
 
