@@ -5,7 +5,7 @@
   
 
 
-<html class="theme-next pisces use-motion" lang="zh-Hans">
+<html class="theme-next mist use-motion" lang="zh-Hans">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -87,21 +87,18 @@
 
 
 
-<meta name="description" content="依赖倒置原则
-定义High level modules should not depend upon low level modules.Both should depend upon abstractions.Abstractions should not depend upon details.Details should depend upon abstractions.翻译上面的话有一下三">
+<meta name="description" content="依赖倒置原则定义High level modules should not depend upon low level modules.Both should depend upon abstractions.Abstractions should not depend upon details.Details should depend upon abstractions.翻译上面的话有一下三层">
 <meta property="og:type" content="article">
 <meta property="og:title" content="设计模式之依赖倒置原则">
 <meta property="og:url" content="https://github.com/dreamertn9527/2017/03/11/设计模式之依赖倒置原则/index.html">
 <meta property="og:site_name" content="9527">
-<meta property="og:description" content="依赖倒置原则
-定义High level modules should not depend upon low level modules.Both should depend upon abstractions.Abstractions should not depend upon details.Details should depend upon abstractions.翻译上面的话有一下三">
+<meta property="og:description" content="依赖倒置原则定义High level modules should not depend upon low level modules.Both should depend upon abstractions.Abstractions should not depend upon details.Details should depend upon abstractions.翻译上面的话有一下三层">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2832613-01a475e7859107e2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2832613-9eee7ee0694116a7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2017-03-12T07:59:40.467Z">
+<meta property="og:updated_time" content="2017-03-13T01:41:36.175Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="设计模式之依赖倒置原则">
-<meta name="twitter:description" content="依赖倒置原则
-定义High level modules should not depend upon low level modules.Both should depend upon abstractions.Abstractions should not depend upon details.Details should depend upon abstractions.翻译上面的话有一下三">
+<meta name="twitter:description" content="依赖倒置原则定义High level modules should not depend upon low level modules.Both should depend upon abstractions.Abstractions should not depend upon details.Details should depend upon abstractions.翻译上面的话有一下三层">
 <meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/2832613-01a475e7859107e2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 
 
@@ -110,8 +107,8 @@
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
-    scheme: 'Pisces',
-    sidebar: {"position":"left","display":"always","offset":15,"offset_float":0,"b2t":true,"scrollpercent":true},
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"hide","offset":15,"offset_float":0,"b2t":true,"scrollpercent":true},
     fancybox: true,
     motion: true,
     duoshuo: {
@@ -379,15 +376,12 @@
       
 
       
-        <h2 id="依赖倒置原则"><a href="#依赖倒置原则" class="headerlink" title="依赖倒置原则"></a>依赖倒置原则</h2><hr>
-<h3 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h3><p>High level modules should not depend upon low level modules.Both should depend upon abstractions.Abstractions should not depend upon details.Details should depend upon abstractions.<br>翻译上面的话有一下三层含义：</p>
+        <h2 id="依赖倒置原则"><a href="#依赖倒置原则" class="headerlink" title="依赖倒置原则"></a>依赖倒置原则</h2><h3 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h3><p>High level modules should not depend upon low level modules.Both should depend upon abstractions.Abstractions should not depend upon details.Details should depend upon abstractions.<br>翻译上面的话有一下三层含义：</p>
 <ul>
 <li>高层模块不应该依赖底层模块，两者都应该依赖其抽象</li>
 <li>抽象不应该依赖其细节</li>
-<li>细节应该依赖抽象 </li>
-</ul>
-<p>高层模块和低层模块容易理解，每一个逻辑的实现都是由原子逻辑组成的，不可分割的原子逻辑就是低层模块，原子逻辑的再组装就是高层模块。那什么是抽象？什么又是细节呢？在Java语言中，==抽象就是指接口或抽象类==，两者都是不能直接被实例化的；==细节就是实现类==，实现接口或继承抽象类而产生的类就是细节，其特点就是可以直接被实例化，也就是可以加上一个关键字new产生一个对象。依赖倒置原则在Java语言中的表现就是:   </p>
-<ul>
+<li>细节应该依赖抽象 <a id="more"></a> 
+高层模块和低层模块容易理解，每一个逻辑的实现都是由原子逻辑组成的，不可分割的原子逻辑就是低层模块，原子逻辑的再组装就是高层模块。那什么是抽象？什么又是细节呢？在Java语言中，==抽象就是指接口或抽象类==，两者都是不能直接被实例化的；==细节就是实现类==，实现接口或继承抽象类而产生的类就是细节，其特点就是可以直接被实例化，也就是可以加上一个关键字new产生一个对象。依赖倒置原则在Java语言中的表现就是:   </li>
 <li>模块间的依赖通过抽象发生，实现类之间不发生直接的依赖关系，其依赖关系是通过接口或抽象类产生的；</li>
 <li>接口或抽象类不依赖于实现类；</li>
 <li>实现类依赖接口或抽象类。</li>
@@ -678,6 +672,7 @@ var duoshuoQuery = {short_name:"dreamersite"};
   <span class="author" itemprop="copyrightHolder">dreamertn9527</span>
 </div>
 
+<!-- 
 
 <div class="powered-by">
   
@@ -686,6 +681,7 @@ var duoshuoQuery = {short_name:"dreamersite"};
 <div class="theme-info">
   
 </div>
+-->
 
 
         
@@ -749,13 +745,6 @@ var duoshuoQuery = {short_name:"dreamersite"};
 
   
   
-
-
-  <script type="text/javascript" src="/js/src/affix.js?v=5.1.0"></script>
-
-  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.0"></script>
-
-
 
   
   <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>

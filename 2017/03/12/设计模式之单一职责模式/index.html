@@ -5,7 +5,7 @@
   
 
 
-<html class="theme-next pisces use-motion" lang="zh-Hans">
+<html class="theme-next mist use-motion" lang="zh-Hans">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -88,26 +88,20 @@
 
 
 <meta name="description" content="单一职责原则1There should never be more than one reason for a class to change.
-分析电话通话的时候有四个过程发生：拨号、通话、回应、挂机，如下所示:
-下面是具体代码实现：
-12345678910111213141516/** * 类描述: * * @author:tangniannian * @date:2016/12/5 * @修">
+分析电话通话的时候有四个过程发生：拨号、通话、回应、挂机，如下所示:">
 <meta property="og:type" content="article">
 <meta property="og:title" content="设计模式之单一职责模式">
 <meta property="og:url" content="https://github.com/dreamertn9527/2017/03/12/设计模式之单一职责模式/index.html">
 <meta property="og:site_name" content="9527">
 <meta property="og:description" content="单一职责原则1There should never be more than one reason for a class to change.
-分析电话通话的时候有四个过程发生：拨号、通话、回应、挂机，如下所示:
-下面是具体代码实现：
-12345678910111213141516/** * 类描述: * * @author:tangniannian * @date:2016/12/5 * @修">
+分析电话通话的时候有四个过程发生：拨号、通话、回应、挂机，如下所示:">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2832613-daa75ce9d40025d0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2832613-1d2d4cd5b53eed97.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2017-03-12T07:59:02.567Z">
+<meta property="og:updated_time" content="2017-03-13T01:40:26.928Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="设计模式之单一职责模式">
 <meta name="twitter:description" content="单一职责原则1There should never be more than one reason for a class to change.
-分析电话通话的时候有四个过程发生：拨号、通话、回应、挂机，如下所示:
-下面是具体代码实现：
-12345678910111213141516/** * 类描述: * * @author:tangniannian * @date:2016/12/5 * @修">
+分析电话通话的时候有四个过程发生：拨号、通话、回应、挂机，如下所示:">
 <meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/2832613-daa75ce9d40025d0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 
 
@@ -116,8 +110,8 @@
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
-    scheme: 'Pisces',
-    sidebar: {"position":"left","display":"always","offset":15,"offset_float":0,"b2t":true,"scrollpercent":true},
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"hide","offset":15,"offset_float":0,"b2t":true,"scrollpercent":true},
     fancybox: true,
     motion: true,
     duoshuo: {
@@ -386,8 +380,7 @@
 
       
         <h2 id="单一职责原则"><a href="#单一职责原则" class="headerlink" title="单一职责原则"></a>单一职责原则</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">There should never be more than one reason for a class to change.</div></pre></td></tr></table></figure>
-<h3 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h3><p>电话通话的时候有四个过程发生：拨号、通话、回应、挂机，如下所示:<br><img src="http://upload-images.jianshu.io/upload_images/2832613-daa75ce9d40025d0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"></p>
-<p>下面是具体代码实现：</p>
+<h3 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h3><p>电话通话的时候有四个过程发生：拨号、通话、回应、挂机，如下所示:<br><img src="http://upload-images.jianshu.io/upload_images/2832613-daa75ce9d40025d0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"><br><a id="more"></a><br>下面是具体代码实现：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/**</span></div><div class="line"> * 类描述:</div><div class="line"> *</div><div class="line"> * <span class="doctag">@author</span>:tangniannian</div><div class="line"> * <span class="doctag">@date</span>:2016/12/5</div><div class="line"> * @修改描述：</div><div class="line"> * <span class="doctag">@modifier</span> $&#123;tags&#125;</div><div class="line"> */</div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">IPhone</span> </span>&#123;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">void</span> <span class="title">dial</span><span class="params">(String phoneNum)</span></span>;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">void</span> <span class="title">chat</span><span class="params">(Object o)</span></span>;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">void</span> <span class="title">hangup</span><span class="params">()</span></span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>上面的代码看起来没有问题，但是单一职责原则要求一个接口或者类只有一个原因引起变化，也就是说一个接口或者类只有一个职责，它就负责一件事，上面的接口显然并不是只负责一件事情。<br>IPone这个接口可不只是有一个职责，它包含了两个职责：一个是协议管理，一个是数据送达。dial()和hangup()两个方法实现的是协议管理，分别负责拨号和挂机；chat()是实现数据送达。<br>下面分析上面存在的问题。第一，协议变化显然会造成接口或者类引起变化；第二，数据传送也会造成接口或者类引起变化。<br>分析发现，上面的接口包含了两个职责，而且两个职责互不影响，所以考虑拆分为两个接口。如下图所示:<br><img src="http://upload-images.jianshu.io/upload_images/2832613-1d2d4cd5b53eed97.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">// 代码描述</div></pre></td></tr></table></figure></p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">IDataTransfer</span> </span>&#123;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">void</span> <span class="title">chat</span><span class="params">(IConnectionManager iConnectionManager)</span></span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
@@ -657,6 +650,7 @@ var duoshuoQuery = {short_name:"dreamersite"};
   <span class="author" itemprop="copyrightHolder">dreamertn9527</span>
 </div>
 
+<!-- 
 
 <div class="powered-by">
   
@@ -665,6 +659,7 @@ var duoshuoQuery = {short_name:"dreamersite"};
 <div class="theme-info">
   
 </div>
+-->
 
 
         
@@ -728,13 +723,6 @@ var duoshuoQuery = {short_name:"dreamersite"};
 
   
   
-
-
-  <script type="text/javascript" src="/js/src/affix.js?v=5.1.0"></script>
-
-  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.0"></script>
-
-
 
   
   <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
