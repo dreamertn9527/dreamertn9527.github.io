@@ -95,7 +95,7 @@
 <meta property="og:description" content="依赖倒置原则定义High level modules should not depend upon low level modules.Both should depend upon abstractions.Abstractions should not depend upon details.Details should depend upon abstractions.翻译上面的话有一下三层">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2832613-01a475e7859107e2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2832613-9eee7ee0694116a7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2017-03-13T01:41:36.175Z">
+<meta property="og:updated_time" content="2017-05-08T06:16:23.157Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="设计模式之依赖倒置原则">
 <meta name="twitter:description" content="依赖倒置原则定义High level modules should not depend upon low level modules.Both should depend upon abstractions.Abstractions should not depend upon details.Details should depend upon abstractions.翻译上面的话有一下三层">
@@ -380,8 +380,11 @@
 <ul>
 <li>高层模块不应该依赖底层模块，两者都应该依赖其抽象</li>
 <li>抽象不应该依赖其细节</li>
-<li>细节应该依赖抽象 <a id="more"></a> 
-高层模块和低层模块容易理解，每一个逻辑的实现都是由原子逻辑组成的，不可分割的原子逻辑就是低层模块，原子逻辑的再组装就是高层模块。那什么是抽象？什么又是细节呢？在Java语言中，==抽象就是指接口或抽象类==，两者都是不能直接被实例化的；==细节就是实现类==，实现接口或继承抽象类而产生的类就是细节，其特点就是可以直接被实例化，也就是可以加上一个关键字new产生一个对象。依赖倒置原则在Java语言中的表现就是:   </li>
+<li>细节应该依赖抽象</li>
+</ul>
+<a id="more"></a> 
+<p>高层模块和低层模块容易理解，每一个逻辑的实现都是由原子逻辑组成的，不可分割的原子逻辑就是低层模块，原子逻辑的再组装就是高层模块。那什么是抽象？什么又是细节呢？在Java语言中，==抽象就是指接口或抽象类==，两者都是不能直接被实例化的；==细节就是实现类==，实现接口或继承抽象类而产生的类就是细节，其特点就是可以直接被实例化，也就是可以加上一个关键字new产生一个对象。依赖倒置原则在Java语言中的表现就是:   </p>
+<ul>
 <li>模块间的依赖通过抽象发生，实现类之间不发生直接的依赖关系，其依赖关系是通过接口或抽象类产生的；</li>
 <li>接口或抽象类不依赖于实现类；</li>
 <li>实现类依赖接口或抽象类。</li>
@@ -558,7 +561,7 @@ var duoshuoQuery = {short_name:"dreamersite"};
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">8</span>
+                <span class="site-state-item-count">9</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -580,7 +583,7 @@ var duoshuoQuery = {short_name:"dreamersite"};
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">8</span>
+                <span class="site-state-item-count">9</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
