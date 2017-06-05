@@ -546,27 +546,14 @@
 
       
         
-          
-            <h4 id="设置Git的user-name和email"><a href="#设置Git的user-name和email" class="headerlink" title="设置Git的user name和email"></a>设置Git的user name和email</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">git config --global user.name &quot;dreamertn9527&quot;</div><div class="line">git config --global user.email &quot;2712215541p@qq.com&quot;</div></pre></td></tr></table></figure>
-<h4 id="生成SSH密钥过程"><a href="#生成SSH密钥过程" class="headerlink" title="生成SSH密钥过程"></a>生成SSH密钥过程</h4><p>查看是否已经有了ssh密钥：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">cd ~/.ssh</div></pre></td></tr></table></figure></p>
-<p>生成密钥</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">#按3个回车，密码为空。</div><div class="line"></div><div class="line">ssh-keygen -t rsa -C &quot;2712215541p@qq.com&quot;</div><div class="line"></div><div class="line">最后得到了两个文件：id_rsa和id_rsa.pub</div></pre></td></tr></table></figure>
-<p>在github上添加ssh密钥，这要添加的是“id_rsa.pub”里面的公钥</p>
-<h4 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ssh git@github.com</div></pre></td></tr></table></figure>
-<p>提示如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">connect to host github.com port 22: Connection refused</div></pre></td></tr></table></figure>
-<p>解决办法是在ssh目录下新建文件config，写入如下内容</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">Host github.com</div><div class="line">User 2712215541@qq.com</div><div class="line">Hostname ssh.github.com</div><div class="line">PreferredAuthentications publickey</div><div class="line">IdentityFile ~/.ssh/id_rsa</div><div class="line">Port 443</div></pre></td></tr></table></figure>
-<p>修改文件的权限，否则会提示文件的权限不够</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">chmod 666 config</div></pre></td></tr></table></figure>
-<p>运行如下命令，提示成功</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ssh git@github.com</div></pre></td></tr></table></figure>
-<h4 id="开始使用github"><a href="#开始使用github" class="headerlink" title="开始使用github"></a>开始使用github</h4><p>获取源码</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git clone git@github.com:jhao104/proxy_pool.git</div></pre></td></tr></table></figure>
-<p>这样你的机器上就有一个repo了,git于svn所不同的是git是分布式的，没有服务器概念。所有的人的机器上都有一个repo，每次提交都是给自己机器的repo</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">#仓库初始化</div><div class="line"></div><div class="line">git init</div><div class="line"></div><div class="line">#生成快照并存入项目索引：</div><div class="line"></div><div class="line">git add</div><div class="line"></div><div class="line">#项目索引提交</div><div class="line"></div><div class="line">git commit</div><div class="line"></div><div class="line"># 协作编程</div><div class="line">#将本地repo于远程的origin的repo合并，推送本地更新到远程：</div><div class="line"></div><div class="line">git push origin master</div><div class="line"></div><div class="line">#更新远程更新到本地</div><div class="line"></div><div class="line">git pull origin maste</div></pre></td></tr></table></figure>
-
-          
+          <h4 id="设置Git的user-name和email"><a href="#设置Git的user-name和email" class="headerlink" title="设置Git的user name和email"></a>设置Git的user name和email</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">git config --global user.name &quot;dreamertn9527&quot;</div><div class="line">git config --global user.email &quot;2712215541p@qq.com&quot;</div></pre></td></tr></table></figure>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/06/05/git ssh key生成步骤/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
